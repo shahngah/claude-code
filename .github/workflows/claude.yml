@@ -1,4 +1,4 @@
-name: Claude Code
+concurrency: name: Claude Code
 
 on:
   issue_comment:
@@ -21,18 +21,18 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
-      issues: read
-      id-token: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4
-        with:
-          fetch-depth: 1
+      isu : baca
+      id-token : tulis
+    langkah-langkah :
+      - nama : Repositori pembayaran
+        kegunaan : tindakan/pemeriksaan@11bd71901bbe5b1630ceea73d27597364c9af683   # v4
+        dengan :
+          kedalaman pengambilan : 1
 
-      - name: Run Claude Code
-        id: claude
-        uses: anthropics/claude-code-action@v1
-        with:
-          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+      - nama : Jalankan Kod Claude
+        id : claude
+        kegunaan : antropics/claude-code-action@v1
+        dengan :
+          kunci_api_antropik : $ { { rahsia.KUNCI_API_ANTHROPIK } }
           claude_args: "--model claude-sonnet-4-5-20250929"
 
